@@ -10,54 +10,63 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Alyson Morais</title>
 </head>
+<header>
+    <nav>
+        <a href="#" class="logo">Home</a>
+        <ul>
+            <li><a href="#">About Me</a> </li>
+            <li><a href="#">Games</a> </li>
+            <li><a href="#">Contacts</a> </li>
+        </ul>
+    </nav>
+</header>
+<section class="banner"></section>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+</script>
 
-<body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a>About Me</a></li>
-                <li><a>Games</a></li>
-                <li><a>Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="presentationContainer">
-            <div class="presentation">
-                <h2 style="text-align: left;"> Hi, i'm</h2>
-                <h1> Alyson Morais</h1>
-                <h2 style="text-align: right; "> Game Developer</h2>
-            </div>
-            <img class="image-perfil" src="Foto.jpg">
+<main>
+    <div class="presentationContainer">
+        <div class="presentation">
+            <h2 style="text-align: left;"> Hi, i'm</h2>
+            <h1> Alyson Morais</h1>
+            <h2 style="text-align: right; "> Game Developer</h2>
         </div>
+        <img class="image-perfil" src="Foto.jpg">
+    </div>
 
-        <div class="div-aboutMe">
-            <p class="text-aboutMe">I have a degree in Digital Games(Jogos Digitais) and i am currently 
-                studying Systems Analysis and Development(Análise e Desenvolvimento de Sistemas). I have experience in developing mechanics, UI, AI, in-app
-                purchases, in-app ads, and all other necessary steps to bring a game to publication. </p>
-        </div>
+    <div class="div-aboutMe">
+        <p class="text-aboutMe">I have a degree in Digital Games(Jogos Digitais) and i am currently
+            studying Analysis and Development of Systems(Análise e Desenvolvimento de Sistemas). I have experience
+            in developing mechanics, UI, AI, in-app
+            purchases, in-app ads, and all other necessary steps to bring a game to publication. </p>
+    </div>
 
-        <div class="published-games">
-            <h1> Published Games </h1>
-            <div class="games-box">
-                <img class="games-images" src="Published Games/JustKeepClimbing.png">
-                <video class="selected-video-test" autoplay="autoplay">
-                    <source src="Published Games/BuildingAWayVideo.mp4">
-                </video>
-                <img class="games-images" src="Published Games/InfiniteCurse.png">
-            </div>
+    <div class="published-games">
+        <h1> Published Games </h1>
+        <div class="games-box">
+            <img class="games-images" src="Published Games/JustKeepClimbing.png">
+            <video class="selected-video-test" autoplay="autoplay">
+                <source src="Published Games/BuildingAWayVideo.mp4">
+            </video>
+            <img class="games-images" src="Published Games/InfiniteCurse.png">
         </div>
+    </div>
 
-        <div class="contacts-box">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/alysonmorais"> <img class="contacts-icons" src="Contacts/linkedin.png"></a></li>
-                <li><a href="https://github.com/AlysonMoraiis"> <img class="contacts-icons" src="Contacts/github.png"></a></li>
-                <li><a href="mailto:alysonmorais35@hotmail.com"> <img class="contacts-icons" src="Contacts/email.png"></a></li>
-            </ul>
-        </div>
-    </main>
+    <div class="contacts-box">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/alysonmorais"> <img class="contacts-icons"
+                        src="Contacts/linkedin.png"></a></li>
+            <li><a href="https://github.com/AlysonMoraiis"> <img class="contacts-icons" src="Contacts/github.png"></a>
+            </li>
+            <li><a href="mailto:alysonmorais35@hotmail.com"> <img class="contacts-icons" src="Contacts/email.png"></a>
+            </li>
+        </ul>
+    </div>
+</main>
 
 </body>
 
