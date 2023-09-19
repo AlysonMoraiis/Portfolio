@@ -5,6 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -66,7 +73,7 @@ nav ul li a {
 
 body {
     margin-top: 200px;
-    background-image: url(Background.jpg);
+    background: linear-gradient(#171717, #0e0c0c);
     background-size: cover;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -135,9 +142,9 @@ body::before {
 }
 
 .published-games {
-    margin-top: 50px;
     display: flex;
     justify-content: center;
+    margin: 5rem;
 }
 
 .published-games h1 {
@@ -187,15 +194,79 @@ body::before {
     height: 50px;
 }
 
-
 footer {
-    justify-content: center;
-    display: flex;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.527) 50%);
-    padding: 100px 0;
+    width: 100%;
+    color: var(--color-neutral-40);
 }
 
-.footer-text {
-    color: #FFFFFF;
-    font-size: 15px;
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer_contacts h1 {
+    display: inline-block;
+    font-size: 2rem;
+    padding-bottom: 0.4rem;
+}
+#footer_contacts p {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.3rem;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1rem;
+    height: 100;
+    
 }
