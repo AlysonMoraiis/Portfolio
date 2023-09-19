@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +9,11 @@
 }
 
 :root {
-    --color-neutral-0: #0e0c0c;
+    --color-neutral-0: #101114;
     --color-neutral-10: #171717;
     --color-neutral-30: #a8a29e;
     --color-neutral-40: #f5f5f5;
+    --color-red-0: #e21111;
 }
 
 nav {
@@ -71,22 +75,7 @@ nav ul li a {
 
 }
 
-body {
-    margin-top: 200px;
-    background: linear-gradient(#171717, #0e0c0c);
-    background-size: cover;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
-body::before {
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-}
 
 .presentationContainer {
     margin: 50px;
@@ -102,7 +91,7 @@ body::before {
 }
 
 .presentation h1 {
-    color: rgb(252, 21, 4);
+    color: var(--color-red-0);
     font-size: 60px;
 }
 
@@ -113,6 +102,7 @@ body::before {
     font-size: 32px;
     padding-left: 4%;
     padding-right: 4%;
+    font-family: 'Poppins';
 }
 
 .image-perfil {
@@ -123,14 +113,30 @@ body::before {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
+body {
+    margin-top: 150px;
+    background: linear-gradient(#1b1c22, #1a1a1a);
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
 .div-aboutMe {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    background: rgba(0, 0, 0, 0.24);
-    border-top: 3px solid #000;
-    border-bottom: 3px solid #000;
+    flex-direction: column;
+    background: var(--color-neutral-0);
+    padding: 2rem;
 }
 
 .text-aboutMe {
@@ -138,30 +144,83 @@ body::before {
     text-align: center;
     font-size: 20px;
     color: white;
-    width: 800px;
+    max-width: 830px;
+    line-height: 2.4rem;
 }
 
-.published-games {
+.button_see_more {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 0.4rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-neutral-40);
+    background-color: var(--color-red-0);
+    border: none;
+    border-radius: 2px;
+}
+
+#ch {
+    display: none;
+}
+
+#ch:checked~.content {
+    display: block;
+}
+
+#ch:checked~label {
+    display: none;
+}
+
+.content {
+    display: none;
+    text-align: center;
+}
+
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--color-neutral-40);
+    padding: 0.5rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-red-0);
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: 1s ease-in-out;
+}
+
+label:hover {
+    transition: 1s ease-in-out;
+    background: var(--color-red-0);
+}
+
+.projects {
     display: flex;
     justify-content: center;
     margin: 5rem;
 }
 
-.published-games h1 {
+.projects h1 {
     font-size: 30px;
     color: white;
     text-align: center;
-    text-transform: uppercase;
     position: absolute;
 }
 
-.games-box {
+.project_box {
     margin-top: 70px;
 }
 
-.games-images {
+.project-image {
     width: 350px;
     border-radius: 5%;
+    margin: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -173,7 +232,7 @@ body::before {
 }
 
 .selected-video-test {
-    width: 600px;
+    width: 415px;
     border-radius: 5%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
@@ -204,7 +263,7 @@ footer {
 }
 
 #footer_content {
-    background-color: #0c0a0a;
+    background-color: var(--color-neutral-0);
     padding: 3rem 3.5rem;
 }
 
@@ -219,6 +278,7 @@ footer {
     font-size: 2rem;
     padding-bottom: 0.4rem;
 }
+
 #footer_contacts p {
     display: inline-block;
     font-size: 1.2rem;
@@ -268,7 +328,7 @@ footer {
 #footer_copyright {
     display: flex;
     justify-content: center;
-    background-color: #0c0a0a;
+    background-color: var(--color-neutral-0);
     font-size: 0.9rem;
     padding: 1rem;
     height: 100;
