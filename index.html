@@ -1,142 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="reset.css">
-    <link rel="icon" href="Foto.jpg">
-    <link rel="icon" href="logogithub.jpg">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Alyson Morais</title>
+    <title>Game Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-
 <body>
-    <header>
-
-        <nav>
-            <a href="#" class="logo">Home</a>
-
-            <ul>
-                <li><a href="#aboutme">About Me</a> </li>
-                <li><a href="#projects">Projects</a> </li>
-                <li><a href="#contacts">Contacts</a> </li>
-            </ul>
-
-        </nav>
-    </header>
-
-    <section class="banner"></section>
-
-    <script type="text/javascript">
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("nav");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-    </script>
-
-    <main>
-
-        <div class="presentationContainer">
-
-            <a name="aboutme"></a>
-
-            <div class="presentation">
-                <h2 style="text-align: left;"> Hi, i'm</h2>
-                <h1> Alyson Morais</h1>
-                <h2 style="text-align: right; "> Game Developer</h2>
+    <nav class="sidebar">
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="foto.jpeg" alt="Alyson Morais">
             </div>
-            <img class="image-perfil" src="Foto.jpg">
-        </div>
-
-        <div class="div-aboutMe">
-            <input id="ch" type="checkbox">
-
-            <p class="text-aboutMe">I fell in love with programming by creating games.<br>
-
-                Since 2021 I have been working as a freelancer game developer.<br>
-
-                I am currently studying Analysis and Development Systems and dedicate my studies to Java.
-            </p>
-
-            <div class="content">
-
-                <p class="text-aboutMe">I have a degree in Digital Games and have experience with developing 
-                    mechanics, UI, AI, in-app purchases, in-app ads and all other steps necessary to take a game 
-                    to publication. <br><br>
-                    In my routine, I usually study English, in addition to my hobbies, which include reading books,
-                    playing games, watching series and programming prototypes of games that are not normally published.
-                </p>
-
-                <label for="ch">Show less</label>
-            </div>
-
-
-            <label for="ch">Read more</label>
-            <!-- <button href="#" class="button_see_more">See More</button> -->
-        </div>
-
-        <div class="projects">
-
-            <a name="projects"></a>
-
-            <h1> Projects </h1>
-            <div class="project_box">
-                <img class="project-image" src="Published Games/JustKeepClimbing.png">
-                <video class="selected-video-test" autoplay="autoplay">
-                    <source src="Published Games/BuildingAWayVideo.mp4">
-                </video>
-                <img class="project-image" src="Published Games/InfiniteCurse.png">
+            <div class="profile-info">
+                <h1>Alyson Morais</h1>
+                <h2>Game Programmer</h2>
             </div>
         </div>
+        <ul class="nav-links">
+            <div class="sidebar-content">
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#cv">Curriculum Vitae (CV)</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="mailto:alysonmorais35@hotmail.com" class="email-link">alysonmorais35@hotmail.com</a>
+            <div class="social-links">
+                <a href="https://github.com/AlysonMoraiis" class="social-button">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/alysonmorais/" class="social-button">
+                    LinkedIn
+                </a>
+                <a href="https://drive.google.com/file/d/10RQ-XSfs8nn8SjMnbyW3ujtgB3b_5G11/view" class="social-button">
+                    Résumé
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="content">
+        <section id="welcome" class="section">
+            <h2>Welcome</h2>
+            <p>Hello there! I'm <strong>Alyson</strong>, a passionate <strong>Game Developer</strong> based in São Paulo. I create games that challenge, entertain, and immerse players in unique experiences.</p>
+            
+            <p>I run my solo studio, <a href="https://play.google.com/store/apps/dev?id=6644932840620093888&hl=pt_BR&gl=US" target="_blank" class="highlight-link"><strong>Traveler Studios</strong></a>, where I design, develop, and publish my own projects. Every day, I dedicate time to plan, prototype, and refine games that combine <strong>engaging mechanics</strong>, <strong>smooth gameplay</strong>, and <strong>thoughtful design</strong>. Along the way, I've participated in game jams and bootcamps, winning competitions and constantly pushing my creative and technical boundaries.</p>
+            
+            <p>From childhood, games have been more than a hobby—they're my motivation. This love drives me to evolve as a developer, experiment with new ideas, and craft experiences that I hope players will truly enjoy. My goal is simple: make games I’m proud of and continue growing as a developer.</p>
+        </section>
 
-    </main>
-
-
-
-    <footer>
-        <div id="footer_content">
-
-            <a name="contacts"></a>
-
-            <div id="footer_contacts">
-                <h1>Contacts</h1>
-                <p>Feel free to connect with me</p>
-
-                <div id="footer_social_media">
-
-                    <a href="https://github.com/AlysonMoraiis" class="footer-link" id="github">
-                        <i class="fa-brands fa-github id" style="font-size: 3rem; color: black;"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/alysonmorais" class="footer-link" id="linkedin">
-                        <i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i>
-                    </a>
-
-                    <a href="mailto:alysonmorais35@hotmail.com" class="footer-link" id="email">
-                        <i class="fa-regular fa-envelope"></i>
-                    </a>
-
-                    <a href="https://drive.google.com/file/d/10RQ-XSfs8nn8SjMnbyW3ujtgB3b_5G11/view" class="footer-link"
-                        id="cv">
-                        <i class="fa-regular fa-address-card" style="color: #ffffff;"></i>
-                    </a>
-
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-blocks">
+                <!-- Bloco 1: texto à direita -->
+                <div class="project-block">
+                    <div class="project-video-background">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/l44P5gc_EkU?autoplay=1&controls=0&showinfo=0&rel=0&loop=1&playlist=l44P5gc_EkU&mute=1&modestbranding=1&iv_load_policy=3&enablejsapi=0&origin=portfolio"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                        ></iframe>
+                    </div>
+                    <div class="project-block-content">
+                        <div class="project-block-content-inner">
+                            <button class="project-nav left">&#10094;</button>
+                            <div class="project-block-info">
+                                <h3>Just Keep Climbing</h3>
+                                <div class="project-feature-title">AÇÃO JXJ</div>
+                                <p class="project-feature-desc">Face an endless climb to escape a wild bear! Test your reflexes and stay focused as you ascend higher and higher, overcoming challenges and breaking your own distance records.</p>
+                            </div>
+                            <button class="project-nav right">&#10095;</button>
+                        </div>
+                        <div class="project-block-indicators">
+                            <span class="project-block-indicator active"></span>
+                            <span class="project-block-indicator"></span>
+                            <span class="project-block-indicator"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloco 2: texto à esquerda -->
+                <div class="project-block reverse">
+                    <div class="project-video-background">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/dOpmCSiAjvU?autoplay=1&controls=0&showinfo=0&rel=0&loop=1&playlist=dOpmCSiAjvU&mute=1&modestbranding=1&iv_load_policy=3&enablejsapi=0&origin=portfolio"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                        ></iframe>
+                    </div>
+                    <div class="project-block-content">
+                        <div class="project-block-content-inner">
+                            <button class="project-nav left">&#10094;</button>
+                            <div class="project-block-info">
+                                <h3>Building a Way</h3>
+                                <div class="project-feature-title">ECONOMIA CONDUZIDA POR JOGADORES</div>
+                                <p class="project-feature-desc">In Building a Way, follow a João-de-barro bird starting at the forest floor. With patience and quick thinking, help him navigate his way upward to reach his home.</p>
+                            </div>
+                            <button class="project-nav right">&#10095;</button>
+                        </div>
+                        <div class="project-block-indicators">
+                            <span class="project-block-indicator active"></span>
+                            <span class="project-block-indicator"></span>
+                            <span class="project-block-indicator"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloco 3: texto à direita -->
+                <div class="project-block">
+                    <div class="project-video-background">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/YtwzCOfk4bQ?autoplay=1&controls=0&showinfo=0&rel=0&loop=1&playlist=YtwzCOfk4bQ&mute=1&modestbranding=1&iv_load_policy=3&enablejsapi=0&origin=portfolio"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                        ></iframe>
+                    </div>
+                    <div class="project-block-content">
+                        <div class="project-block-content-inner">
+                            <button class="project-nav left">&#10094;</button>
+                            <div class="project-block-info">
+                                <h3>Infinite Curse</h3>
+                                <div class="project-feature-title">AVENTURA E EXPLORAÇÃO</div>
+                                <p class="project-feature-desc">Infinite Curse is a retro turn-based roguelike RPG filled with items and evil creatures. Take on the role of Taylor, a thief on a quest for Vlad’s precious treasures.</p>
+                            </div>
+                            <button class="project-nav right">&#10095;</button>
+                        </div>
+                        <div class="project-block-indicators">
+                            <span class="project-block-indicator active"></span>
+                            <span class="project-block-indicator"></span>
+                            <span class="project-block-indicator"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <section id="cv" class="section">
+            <h2>Curriculum Vitae (CV)</h2>
+            <div class="cv-content">
+                <p>Game Developer with 3 years of experience using C# and Unity to create complete games and individual systems. Over the past 1 year and 7 months, I’ve worked as a freelance Unity Developer, focusing on gameplay mechanics, UI, AI, in-app purchases, and ads implementation. Fast learner, proactive, and passionate about developing creative and polished gaming experiences.</p>
+                <div class="cv-sections">
+                    <div class="cv-section">
+                        <h3>Education</h3>
+                        <ul>
+                            <li>Digital Games Technology – FMU (Completed Jun 2021)</li>
+                            <li>System Analysis and Development – UNICID (Completed Dec 2024)</li>
+                            <li>C#: explorando a linguagem – Alura</li>
+                            <li>Html5 e Css3 parte 1, 2 e 3</li>
+                        </ul>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Experience</h3>
+                        <ul>
+                            Freelance Game Developer — São Paulo, Brazil (Nov 2021 – Jun 2025)<br>
+                            <br>
+                            <li>Develop complete games using Unity and C#.</li>
+                            <li>Work on gameplay systems, UI, AI, and monetization features.</li>
+                            <li>Handle all stages of development from prototyping to publishing.</li>
+                        </ul>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>C#, Java, HTML, CSS</li>
+                            <li>Unity, Git/GitHub</li>
+                            <li>English Intermediate (strong reading comprehension)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cv-download">
+                    <a href="https://drive.google.com/file/d/10RQ-XSfs8nn8SjMnbyW3ujtgB3b_5G11/view" class="cv-button" target="_blank">
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <div id="footer_copyright">
-            &#169
-            Alyson Morais - 2023 all rights reserved
-        </div>
-
-    </footer>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>I’m always open to new opportunities in game development, whether it’s a full-time position or freelance collaboration.</p>
+                <div class="contact-links">
+                    <a href="mailto:alysonmorais35@hotmail.com">Email</a>
+                    <a href="https://github.com/AlysonMoraiis">GitHub</a>
+                    <a href="https://www.linkedin.com/in/alysonmorais/">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
-
 </html>
