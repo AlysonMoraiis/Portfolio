@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const leftBtn = block.querySelector('.project-nav.left');
         const rightBtn = block.querySelector('.project-nav.right');
         const indicators = block.querySelectorAll('.project-block-indicator');
+
         function update() {
             title.textContent = features[i][current].title;
             desc.textContent = features[i][current].desc;
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.classList.toggle('active', idx === current);
             });
         }
+
         leftBtn.addEventListener('click', () => {
             current = (current - 1 + features[i].length) % features[i].length;
             update();
@@ -51,8 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
             current = (current + 1) % features[i].length;
             update();
         });
+
         update();
     });
+
     // Controle do slideshow de projetos
     const slides = document.querySelectorAll('.project-slide');
     const prevButton = document.querySelector('.prev-button');
@@ -76,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
             showSlide(currentSlide);
         });
 
-        // Mostrar o primeiro slide inicialmente
         showSlide(0);
     }
 
@@ -84,26 +87,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-links a');
 
+    // 🔥 Adiciona rolagem suave ao clicar nos links
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
     // Função para verificar qual seção está visível
     function checkActiveSection() {
         const scrollPosition = window.scrollY;
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 300;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                // Remove active de todos os links
                 navLinks.forEach(link => link.classList.remove('active'));
-                // Adiciona active ao link correspondente
-                document.querySelector(`.nav-links a[href="#${sectionId}"]`).classList.add('active');
+                document.querySelector(`.nav-links a[href="#${sectionId}"]`)?.classList.add('active');
             }
         });
     }
 
-    // Verifica a seção ativa no scroll
     window.addEventListener('scroll', checkActiveSection);
-    // Verifica a seção ativa no carregamento da página
     checkActiveSection();
 });

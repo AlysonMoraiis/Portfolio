@@ -25,7 +25,7 @@
    ======================================== */
 @font-face {
   font-family: "Rajdhani";
-  src: url("rajdhani.regular.ttf") format("truetype");
+  src: url("Merriweather-Regular.otf") format("truetype");
 }
 
 * {
@@ -82,7 +82,7 @@ body {
 
 .profile-info h1 {
   color: var(--color-text-light);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -109,7 +109,7 @@ body {
 .nav-links a {
   color: var(--color-text-light);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding: 0.8rem 2rem;
   display: block;
   transition: var(--transition-default);
@@ -140,6 +140,7 @@ body {
 
 .nav-links a.active {
   background-color: var(--color-bg-medium);
+  color: var(--color-text-white);
 }
 
 .nav-links a.active::before {
@@ -182,7 +183,7 @@ body {
   text-decoration: none;
   padding: 0.5rem 0.3rem;
   border-radius: 4px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   transition: var(--transition-default);
   border: 1px solid var(--color-primary);
   text-align: center;
@@ -238,7 +239,7 @@ body {
 .section h2 {
   color: var(--color-primary);
   margin-bottom: 1.5rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .section p {
@@ -297,55 +298,32 @@ body {
   background-position: center;
 }
 
-@media (max-width: 768px) {
-  .project-block {
-    height: 500px;
-  }
+.project-button {
+  position: absolute;
+  bottom: 60px;
+  z-index: 3;
 
-  .project-block-content-inner {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
+  padding: 0.8rem 1.2rem;
 
-  .project-block-info {
-    flex: 1;
-    min-width: 100%;
-    max-width: 100%;
-    padding: 1.5rem 1rem;
-  }
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-decoration: none;
 
-  .project-block-info h3 {
-    font-size: 2rem;
-  }
-
-  .project-feature-title {
-    font-size: 1.1rem;
-  }
-
-  .project-feature-desc {
-    font-size: 1rem;
-  }
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+  transition: var(--transition-default);
 }
 
-@media (max-width: 480px) {
-  .project-block {
-    height: 450px;
-  }
-
-  .project-block-info h3 {
-    font-size: 1.8rem;
-  }
-
-  .sidebar {
-    flex: 0 0 100%;
-    height: auto;
-    position: relative;
-  }
-
-  body {
-    flex-direction: column;
-  }
+.project-button:hover {
+  background-color: var(--color-text-light);
+  color: var(--color-bg-light);
+  border: 1px solid var(--color-text-black);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
+
 
 /* Video Background */
 .project-video-background {
@@ -672,5 +650,6 @@ body {
 
 .contact-links a:hover {
   background-color: var(--color-primary);
-  color: var(--color-text-light);
+  color: var(--color-text-black);
 }
+
